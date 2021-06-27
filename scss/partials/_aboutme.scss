@@ -30,10 +30,15 @@
     .AboutMe{
         display: grid;
         grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em,1fr) [img-end] 2fr [port-end];
+        column-gap: .5em;
     }
     .AboutMe__Img{
         grid-column: port-start/img-end;
         grid-row: 1/2;
+
+        @include mq{
+            grid-row: 1/ 4;
+        }
     }
 
     .AboutMe__Title {
@@ -45,6 +50,17 @@
     .AboutMe__Subtitle,
     .AboutMe__Text{
         grid-column: port-start/port-end;
+
+        @include mq{
+            grid-column: image-end / port-end;
+            margin-right: 1em;
+        }
+    }
+    .AboutMe__Subtitle{
+        grid-row: 2/3;
     }
 
+    .AboutMe__Text{
+        grid-row: 3 / 4;  
+    }
 }
