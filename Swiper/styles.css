@@ -1,0 +1,11 @@
+.swiper-container{
+    height: 50vh;
+    width: 50vw;
+}
+
+.swiper-slide{
+    background: #CCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
