@@ -185,12 +185,20 @@ strong{
 /*============================= INTRODUCTION ==================================*/
 .intro-container{
     height: 100vh;
-
+    
 }
-
+.section-centered{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.hr{
+    height: 3px;
+    background: var(--dark-blue);
+}
 .intro{
     position: relative;
-    margin: 10vh auto;
 }
 
 .intro__img{
@@ -200,11 +208,30 @@ strong{
 .section__subtitle--intro{
     display: inline-block;
 }
-@media (min-width: 600px){
+.home__social{
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.home__social-icon{
+    font-size: 2rem;
+    color: var(--first-color);
+}
+
+.home__social-icon:hover{
+    color: var(--first-color-alt);
+}
+
+@media (min-width: 900px){
+    .section-centered{
+        align-items: center;
+    }
+
     .intro{
         display: grid;
         width: min-content;
-        margin: 20vh auto;
+        margin: auto auto;
         column-gap: 1em;
         grid-template-areas: 
         "img title"
@@ -228,8 +255,17 @@ strong{
         left: -1.5em;
         width: calc(100% + 1.5em);
     }
-}
 
+    .home__social{
+        display: grid;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: 25vh 1rem;
+        grid-template-columns: max-content;
+        height: 60vh;        
+    }
+}
 
 /*============================= SECOND INTRODUCTION ==================================*/
 
@@ -276,7 +312,10 @@ strong{
 
 /*=================================== SKILLS ========================================*/
 .skills__container{
-    row-gap:0;
+    display:flex;
+    justify-content: start;
+    border: 2px solid red;
+    
 }
 
 .skills__header{
@@ -444,12 +483,18 @@ footer{
     max-width: 15em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin:  1.75em auto 4em;
 }
 
 .SocialIcon{
-    width: 25%;
-    height: 25%;
+    width: 4em;
+    height: 4em;
+}
+
+.SocialIcon--LinkedIn{
+    width: 4.7em;
+    height: 4.7em;
 }
 
 .Copyright::before{
