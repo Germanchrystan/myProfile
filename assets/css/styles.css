@@ -154,6 +154,7 @@ h3{ font-size: var(--h3-font-size);}
 
 .section__title{
     margin-bottom: .25em;
+
 }
 
 .section__title--intro{
@@ -181,7 +182,9 @@ strong{
     padding: .25em 1em;
     margin-bottom: 1em;
 }
-
+.section__title--separator{
+    text-align: center;
+}
 /*============================= INTRODUCTION ==================================*/
 .intro-container{
     height: 100vh;
@@ -313,8 +316,9 @@ strong{
 /*=================================== SKILLS ========================================*/
 .skills__container{
     display:flex;
-    justify-content: start;
-    border: 2px solid red;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
     
 }
 
@@ -322,9 +326,19 @@ strong{
     display: flex;
     align-items: center;
     cursor: pointer;
-    border:2px solid gray;
-    border-radius: 15px 15px 0 0 ;
-    padding-left: 2.7rem;
+    background: var(--dark-blue);
+    border: none;
+    font-size:2rem;
+    letter-spacing:.15em;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: var(--ff-ss);
+    padding: 1rem 2.7rem;
+}
+
+.skills__title{
+    color: white;
+    
 }
 
 .skills__icon,
@@ -339,6 +353,7 @@ strong{
 
 .skills__title{
     font-size:var(--h3-font-size);
+    text-align: center;
 }
 
 .skills__subtitle{
@@ -352,10 +367,9 @@ strong{
 }
 
 .skills__list{
-    row-gap: 1.5rem;
+    /* row-gap: 1.5rem; */
     transition: transform 0.26s ease;
-    background: lightgray;
-    border-radius: 0 0 15px 15px;
+    background: gray;
 }
 
 .skills__titles{
@@ -371,7 +385,7 @@ strong{
 .skills__name{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-
+    
 }
 .skills__svg{
     width: 2.5em;
@@ -403,7 +417,13 @@ strong{
     transform: rotate(-180deg);
 }
 
-
+@media (min-width: 900px){
+    .skills__container{
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+}
 /*================================== SWIPER ======================================*/
 
 .swiper-container{
@@ -425,10 +445,6 @@ strong{
     width: 90%;
     margin: 0 auto;
     max-width: 50em;
-}
-
-.ContactMe h1{
-    text-align: center;
 }
 
 form{
