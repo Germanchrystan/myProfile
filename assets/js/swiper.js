@@ -30,3 +30,24 @@ const swiper = new Swiper('.swiper-container', {
     },
   });
   
+
+
+
+const portfolioArray = [
+  {
+    title:'Henry`s Kitchen',
+    img:'./assets/img/henryskitchen.png',
+    link: 'https://henrys-kitchen.vercel.app'
+  },
+  {
+    title:'Calculator App',
+    img:'https://raw.githubusercontent.com/Germanchrystan/Calculator/main/design/desktop-design-theme-1.jpg',
+    link:'https://germanchrystan.github.io/Calculator/'
+  },
+  {
+    title:'Weather Network',
+    img:'./assets/img/weather.png',
+    link:'https://weather-network-alpha.vercel.app/'
+  }
+]
+
