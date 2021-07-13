@@ -117,7 +117,7 @@ body{
     background: var(--container-color);
     color: var(--input-color);
     margin: 0;
-
+    overflow-x: hidden;
 }
 
 .container {
@@ -129,10 +129,6 @@ body{
 .grid{
     display: grid;
     gap: 1.5rem;
-}
-
-section{
-    padding: 5em 2em;
 }
 
 img{
@@ -151,6 +147,27 @@ h1{ font-size: var(--h1-font-size);}
 h2{ font-size: var(--h2-font-size);}
 h3{ font-size: var(--h3-font-size);}
 
+.button{
+    display: inline-block;
+    width: auto;
+    margin-top: 1em;
+    margin-left: auto;
+    background: var(--dark-blue);
+    border: none;
+    color: white;
+    font-size:1rem;
+    letter-spacing:.15em;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: var(--ff-ss);
+   
+    padding: .5em 1.5em;
+   
+}
+
+section{
+    padding: 2em 5em;
+}
 
 .section__title{
     margin-bottom: .25em;
@@ -188,26 +205,36 @@ strong{
 /*============================= INTRODUCTION ==================================*/
 .intro-container{
     height: 100vh;
-    
 }
+
+.intro-background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('./../img/Large-Triangles.svg');
+    opacity: 0.7;
+}
+
 .section-centered{
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
+
 .hr{
     height: 3px;
     background: var(--dark-blue);
 }
+
 .intro{
     position: relative;
 }
 
 .intro__img{
     box-shadow: var(--box-shadow);
-
 }
+
 .section__subtitle--intro{
     display: inline-block;
 }
@@ -219,7 +246,8 @@ strong{
 
 .home__social-icon{
     font-size: 2rem;
-    color: var(--first-color);
+    color: white;
+    z-index: 100;
 }
 
 .home__social-icon:hover{
@@ -319,7 +347,7 @@ strong{
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-    
+    height: 100vh;
 }
 
 .skills__header{
@@ -427,17 +455,82 @@ strong{
 /*================================== SWIPER ======================================*/
 
 .swiper-container{
-    height: 50vh;
-    width: 50vw;
+    height: 61vh;
+    width: 61vw;
 }
 
 .swiper-slide{
     background: #CCC;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    overflow: hidden;
 }
 
+.Slide__Bg{
+    position: absolute;
+}
+
+.Slide__Bg--Kitchen{
+    height: 100%;
+    
+}
+
+.Slide__Bg--Weather{
+    height: 120%;
+    top:-4em;
+    width: fit-content;
+}
+
+.swiper-slide--Calc{
+    background: hsl(222, 26%, 31%);;
+}
+
+.Slide__Bg--Calc{
+    height: 90%;
+    background-size: cover;
+    left: 10em;
+
+}
+
+.Slide__Info__Left{
+    width: 25rem;
+    background: rgba(0,0,0,0.5);
+    padding: .5em;
+}
+
+.Slide__Info__Header{
+    z-index: 100;
+    position: relative;
+    width: 25rem;
+    height: fit-content;
+    background: rgba(0,0,0,0.5);
+    /* border:2px solid red; */
+
+}
+
+.Slide__Info__Header__Title{
+    color: white;
+    font-weight: 300;
+    margin: .5em .5em;
+    /* border:2px solid red; */
+}
+
+.Slide__Info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    margin-top: auto;
+    width: 100%;
+}
+
+
+.Slide__Info__Stack{
+    display: flex;
+    justify-content: space-around;
+}
 /*================================== CONTACT ======================================*/
 
 .ContactMe{
