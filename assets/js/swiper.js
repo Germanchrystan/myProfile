@@ -46,7 +46,7 @@ const portfolioArray = [
   },
   {
     title:'Weather Network',
-    img:'./assets/img/weather.png',
+    img:'./assets/img/weathernetwork.png',
     link:'https://weather-network-alpha.vercel.app/'
   }
 ]
