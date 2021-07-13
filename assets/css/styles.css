@@ -117,7 +117,7 @@ body{
     background: var(--container-color);
     color: var(--input-color);
     margin: 0;
-
+    overflow-x: hidden;
 }
 
 .container {
@@ -129,10 +129,6 @@ body{
 .grid{
     display: grid;
     gap: 1.5rem;
-}
-
-section{
-    padding: 5em 2em;
 }
 
 img{
@@ -167,6 +163,10 @@ h3{ font-size: var(--h3-font-size);}
    
     padding: .5em 1.5em;
    
+}
+
+section{
+    padding: 2em 5em;
 }
 
 .section__title{
@@ -205,27 +205,36 @@ strong{
 /*============================= INTRODUCTION ==================================*/
 .intro-container{
     height: 100vh;
-    
-    
 }
+
+.intro-background{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url('./../img/Large-Triangles.svg');
+    opacity: 0.7;
+}
+
 .section-centered{
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
+
 .hr{
     height: 3px;
     background: var(--dark-blue);
 }
+
 .intro{
     position: relative;
 }
 
 .intro__img{
     box-shadow: var(--box-shadow);
-
 }
+
 .section__subtitle--intro{
     display: inline-block;
 }
@@ -237,7 +246,8 @@ strong{
 
 .home__social-icon{
     font-size: 2rem;
-    color: var(--first-color);
+    color: white;
+    z-index: 100;
 }
 
 .home__social-icon:hover{
@@ -337,7 +347,7 @@ strong{
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-    
+    height: 100vh;
 }
 
 .skills__header{
