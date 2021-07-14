@@ -347,7 +347,11 @@ strong{
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
+}
+
+hr{
+    margin: 1em 0;
 }
 
 .skills__header{
