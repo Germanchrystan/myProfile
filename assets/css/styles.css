@@ -541,12 +541,14 @@ hr{
     padding: 5em;
     width: 90%;
     margin: 0 auto;
-    max-width: 50em;
+
 }
 
 form{
     display: flex;
     flex-direction: column;
+    width: 60vw;
+    margin: 0 auto;
 }
 
 label{
@@ -610,12 +612,12 @@ footer{
     height: 4.7em;
 }
 
-.Copyright::before{
+.Copyright{
         content: '';
         display: block;
         height: 1px;
         background: rgba(white, .15);
-        margin: 4em auto;
+        margin: 2em auto;
         width: 25%;
 
 }
