@@ -129,7 +129,7 @@
                     <div class="skills__header">
                         <i class="uil uil-brackets-curly skills__icon"></i>
                         <div>
-                            <h1 class="skills__title">Frontend Skilss</h1>
+                            <h1 class="skills__title">Frontend Skills</h1>
                         </div>
                         <i class="uil uil-angle-down skills__arrow"></i>
                     </div>
@@ -317,21 +317,22 @@
       </div>
     <!------------------------------------------------------------------------>
 
-      
+      <hr>
     <!------------------------------ CONTACT ME ------------------------------>
       <section class="ContactMe">
 		<h1 class="section__title--separator">Contact me</h1>
-		<form action="">
+		<form action="http://formsubmit.co/germanchrystan@gmail.com" method="POST">
 			<label class="Name" for="Name">Name:
-				<input type="text" id="Name">
+				<input type="text" name="name" id="Name" required>
 			</label>
 			<label class="Email" for="E-mail">E-mail:
-				<input type="email" id="E-mail">
+				<input type="email" name="email" id="E-mail" required>
 			</label>
 			<label class="Message" for="Message"> Message:
-				<textarea name="" id="Message"></textarea>
+				<textarea name="message" id="Message" required></textarea>
 			</label>
-
+            <input type="hidden" name="_next" value="./pages/thankyou.html">
+            <input type="hidden" name="_subject" value="New Portfolio Message!">
 			<input class="Button ContactMe__Form--Submit" type="submit" value="SEND">
 		</form>
 	</section>
